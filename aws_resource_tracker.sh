@@ -11,6 +11,8 @@
 #
 set -x
 
+### monitoring ###
+
 echo "print the ec2 instances"
 aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId' > resource_tracker.txt
 
